@@ -23,7 +23,6 @@ export function App() {
       return;
     }
     fetchImages(page, title).then(response => {
-      // console.log(response);
       setIsLoading(false);
       setTotalHits(response.totalHits);
       setSearhImg(prevState => [...prevState, ...response.hits]);
